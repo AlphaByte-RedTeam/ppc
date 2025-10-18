@@ -1,0 +1,25 @@
+looping:
+- infinite loop --> pakai `while`
+- finite loop --> pakai `for`
+- looping dengan kondisi --> pakai `while` (tambahan)
+
+conditional statement:
+- pakai if..else
+- pakai switch..case
+
+kelemahan looping tanpa batas:
+- memory bisa habis dengan cepat karena menghasilkan garbage
+
+
+comparison operators:
+- < (kurang dari)
+- > (lebih dari)
+- <= (kurang dari atau sama dengan)
+- >= (lebih dari atau sama dengan)
+- == (sama dengan)
+- != (tidak sama dengan)
+
+logical operators:
+- and (dan)
+- or (atau)
+- not (tidak)
