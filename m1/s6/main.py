@@ -3,7 +3,13 @@ def main():
     # 1. Shopping List
     print("Guided Practice 1.")
     #   a. Create a list of 5 groceries.
-    groceries: list[str] = ["apple", "banana", "milk", "flour", "baking soda"]
+    groceries: list[str] = [
+        "apple",
+        "banana",
+        "milk",
+        "flour",
+        "baking soda",
+    ]
     #   b. Print the list and its length.
     print(f"List of groceries is {groceries}")
     print(f"The length of the groceries is {len(groceries)}")
@@ -54,3 +60,7 @@ def main():
     classroom = {"students": ["Ari", "Bima", "Cici"]}
     #   c. Print the second student’s name.
     print(f"The second student's name is {classroom['students'][1]}")
+
+
+if __name__ == "__main__":
+    main()
