@@ -3,7 +3,6 @@
 # Sekolah Coding Virya akt. 2025
 # Menu-driven starter program with validation and error handling
 
-import sys
 
 students = {}  # structure: {student_id: {"name": str, "grades": [{"subject": str, "grade": int, "status": str}, ...]}}
 
@@ -63,7 +62,13 @@ def remove_student_flow():
     if not student_exists(sid):
         print(f"Error: Student ID '{sid}' not found.")
         return
-    confirm = input(f"Are you sure you want to remove {sid} - {students[sid]['name']}? (y/N): ").strip().lower()
+    confirm = (
+        input(
+            f"Are you sure you want to remove {sid} - {students[sid]['name']}? (y/N): "
+        )
+        .strip()
+        .lower()
+    )
     if confirm == "y":
         del students[sid]
         print("Student removed.")
@@ -124,7 +129,9 @@ def add_or_update_grade(student_id: str, subject: str, grade: int) -> str:
             item["status"] = compute_status(grade)
             return "updated"
     # not found -> append
-    grades_list.append({"subject": subject, "grade": grade, "status": compute_status(grade)})
+    grades_list.append(
+        {"subject": subject, "grade": grade, "status": compute_status(grade)}
+    )
     return "added"
 
 
@@ -147,7 +154,11 @@ def remove_subject_flow(student_id=None):
         print(f"{idx}) {item['subject']} - {item['grade']} ({item['status']})")
 
     while True:
-        choice = input("Enter the number of the subject to remove (or 'c' to cancel): ").strip().lower()
+        choice = (
+            input("Enter the number of the subject to remove (or 'c' to cancel): ")
+            .strip()
+            .lower()
+        )
         if choice == "c":
             print("Cancelled.")
             return
@@ -246,8 +257,8 @@ if __name__ == "__main__":
         "grades": [
             {"subject": "Math", "grade": 78, "status": compute_status(78)},
             {"subject": "Bahasa", "grade": 60, "status": compute_status(60)},
-            {"subject": "Science", "grade": 85, "status": compute_status(85)}
-        ]
+            {"subject": "Science", "grade": 85, "status": compute_status(85)},
+        ],
     }
 
     main_menu()
