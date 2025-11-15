@@ -1,6 +1,6 @@
 class Stack:
     def __init__(self):
-        self.items = []
+        self.items = []  # empty array
 
     def push(self, item):
         self.items.append(item)
@@ -21,3 +21,18 @@ class Stack:
     def size(self):
         return len(self.items)
 
+
+# instance
+stack = Stack()  # object initialization
+
+stack.push(2)
+stack.push(4)
+stack.push(9)
+
+print(stack.peek())  # 9
+# stack.pop()
+# stack.pop()
+# stack.pop()
+
+for item in stack.items:
+    print(item)
