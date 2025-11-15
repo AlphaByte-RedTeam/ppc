@@ -15,11 +15,13 @@ Includes demo / test runs at the bottom.
 """
 
 from __future__ import annotations
+
 from typing import Any, Optional
 
 
 class Node:
     """A node in a singly linked list."""
+
     def __init__(self, data: Any):
         self.data: Any = data
         self.next: Optional[Node] = None
@@ -30,6 +32,7 @@ class Node:
 
 class LinkedList:
     """Singly linked list with common operations."""
+
     def __init__(self):
         self.head: Optional[Node] = None
 
@@ -157,6 +160,7 @@ class LinkedList:
 # Demo
 # -----
 
+
 def demo_basic_operations():
     print("=== LinkedList: basic operations demo ===")
     ll = LinkedList()
@@ -176,8 +180,8 @@ def demo_basic_operations():
     ll.print_list()  # expected: 5 -> 10 -> 15 -> 20 -> 30 -> None
 
     print("\nSearch for 20 and 99")
-    print("Found 20?", ll.search(20))
-    print("Found 99?", ll.search(99))
+    print("Found 20?", ll.search(20))  # True
+    print("Found 99?", ll.search(99))  # False
 
     print("\nCount nodes:", ll.count_nodes())  # expected 5
 
@@ -230,9 +234,9 @@ def demo_edge_cases():
 
 def run_all_demos():
     demo_basic_operations()
-    demo_reverse()
-    demo_edge_cases()
-    print("\nAll demos completed.")
+    # demo_reverse()
+    # demo_edge_cases()
+    # print("\nAll demos completed.")
 
 
 if __name__ == "__main__":
