@@ -190,6 +190,11 @@ def demo_basic_operations():
     print("Deleted?", deleted)
     ll.print_list()  # expected: 5 -> 10 -> 20 -> 30 -> None
 
+    print("\nDelete value 99 (not found)")
+    deleted = ll.delete_by_value(99)
+    print("Deleted?", deleted)
+    ll.print_list()  # expected: 5 -> 10 -> 20 -> 30 -> None
+
     print("\nDelete head (5)")
     ll.delete_by_value(5)
     ll.print_list()  # expected: 10 -> 20 -> 30 -> None
@@ -197,6 +202,9 @@ def demo_basic_operations():
     print("\nDelete tail (30)")
     ll.delete_by_value(30)
     ll.print_list()  # expected: 10 -> 20 -> None
+
+    # Print head value
+    print(f"Head is in {ll.head}")
 
 
 def demo_reverse():
